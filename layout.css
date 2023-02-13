@@ -1,0 +1,138 @@
+:root{
+    --amarelo: #fab206;
+    --amarelo-escuro: rgb(161, 124, 0);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--amarelo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 960px;
+    height: 560px;
+    background-color: white;
+    box-shadow: 0 0 50px var(--amarelo-escuro);
+
+    display: flex;
+    position: relative;
+}
+
+    .esquerda{
+        width: 260px;
+        height: 100%;
+        background-color: var(--amarelo);
+    }
+        .esquerda > h1{
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+    .direita{
+        width: 700px;
+        height: 100%;
+        position: relative;
+        background-color: #eee;
+    }
+
+        .menu{
+            list-style: none;
+            display:flex ;
+
+            position: absolute;
+            top: 20px;
+            left: 50px;
+
+            box-shadow: 0 0 10px var(--amarelo-escuro);
+
+            
+        }
+            .menu > li >a{
+                display: inline-block;
+                width: 120px;
+                padding: 12px;
+                background-color: var(--amarelo);
+                text-align: center;
+
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 12px;
+                color: black;
+                text-decoration: none;
+                font-weight: bold; 
+                transition: 0.5s;               
+            }
+
+            .menu > li >a:hover{
+                background-color: black;
+                color: white;
+
+            }
+
+            .direita > h1{
+                font-size: 40px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                position: absolute;
+                top: 130px;
+                left: 170px;
+            }
+
+            .direita > p{
+                font-size: 14px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                position: absolute;
+                top: 210px;
+                left: 170px;
+                width: 480px; 
+                line-height: 25px;               
+            }
+
+            .direita > button{
+                position: absolute;
+                top: 350px;
+                left: 170px;
+                width: 200px;
+                padding: 15px;
+                background-color: black;
+                color: white;
+                font-size: 14px;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: 0.5s;
+            }
+
+            .direita > button:hover{
+                background-color: var(--amarelo);
+                border: dashed 2px black;
+                color: black;
+            }
+
+    .foto{
+        width: 270px;
+        height: 400px;       
+        position: absolute;
+        top: 120px;
+        left: 120px;
+        background-image: url(modelo.jpg);
+        background-size: cover;
+        border-top: solid 4px black;
+        border-bottom: solid 4px black;
+    }
+
+    ::selection{
+        background-color: var(--amarelo);
+    }
+
+    ::-moz-selection{
+        background-color: var(--amarelo);
+    }
